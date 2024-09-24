@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page Title -->
+    <title>My Portfolio</title>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Swiper.js CSS for Carousels -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- AOS CSS for Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#stories">Stories</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Fullscreen Background Section -->
+    <section id="background" class="background-section">
+      <!-- This is just the background image -->
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <h2>I'm Clay Wilson</h2>
+      <div class="about-content" data-aos="fade-up">
+        <p>I like to think of myself as a consumer turned creator.</p>
+        <p>
+          I embrace each day as a unique project, an exploration of endless
+          possibilities with no rhyme reason or correlation to the day before.
+        </p>
+        <p>
+          What drives me is the burning desire to create in diverse and
+          innovative ways;
+        </p>
+        <p>I don’t seek mastery of one style but competency in many.</p>
+        <p>
+          This website is both another canvas and a galley of what I have done.
+        </p>
+      </div>
+    </section>
+
+    <!-- Portfolio Carousel -->
+    <section id="portfolio">
+      <h2>My Work</h2>
+      <div class="swiper-container portfolio-carousel" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <a href="gallery1.html">
+              <div class="slide-content">
+                <img src="images/stormcast.jpg" alt="Project 1" />
+                <div class="slide-text">
+                  <h3>Miniature painting</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="gallery2.html">
+              <div class="slide-content">
+                <img src="images/furnace.jpg" alt="Project 2" />
+                <div class="slide-text">
+                  <h3>Metalwork</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="gallery3.html">
+              <div class="slide-content">
+                <img src="images/macbeth.png" alt="Project 3" />
+                <div class="slide-text">
+                  <h3>Digital Art and CAD</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="gallery4.html">
+              <div class="slide-content">
+                <img src="images/submarine.jpg" alt="Project 4" />
+                <div class="slide-text">
+                  <h3>Miscellaneous Mediums</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <!-- Stories Section -->
+    <section id="stories">
+      <h2>Writing Exercises</h2>
+      <div class="stories-container" data-aos="fade-up">
+        <!-- Story Entries -->
+        <div class="story">
+          <h3>The American Otherworld</h3>
+          <p>
+            A collection of stories exploring ideas in american mythology and
+            liminal places
+          </p>
+          <a href="americanotherworld.html" class="read-more">Read More</a>
+        </div>
+        <!-- Add more stories as needed -->
+        <div class="story">
+          <h3>Musings and Rambalings</h3>
+          <p>A loose collection of thoughts</p>
+          <a href="thoughts.html" class="read-more">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Like what you see?</h2>
+      <div class="contact">
+        <div class="contact-details">
+        <p>
+            If you’re a fellow enthusiast in the world of tabletop gaming, an artist with interesting projects in mind,
+            or simply seeking creative solutions to unique problems, I’m here to collaborate. With a commitment to fast
+            turnaround times and competitive pricing, I offer a range of creative services, from tabletop gaming to 
+            tackling challenging DIY ventures. Reach out to me at 
+          <a href="mailto:entropy4free@gmail.com">entropy4free@gmail.com</a>
+            and let’s start a conversation about bringing your creative visions to life.
+          
+        </p>
+       <!--   <div class="social-links">
+          <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank"
+            >LinkedIn</a
+          > -->
+        </div>
+    </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Claymerica Industries</p>
+    </footer>
+
+    <!-- JavaScript Links -->
+    <!-- Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+
+    <!-- Initialize AOS -->
+    <script>
+      AOS.init({
+        duration: 800,
+      });
+    </script>
+  </body>
+</html>
