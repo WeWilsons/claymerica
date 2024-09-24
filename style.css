@@ -56,27 +56,27 @@ a:hover {
 /* Background Section (Fullscreen Background) */
 .background-section {
   height: 100vh;
-  background-image: url("images/ClayDisplay.jpg");
+  background-image: url("images/ClayDisplay.jpg"); /* Make sure the image path is correct */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-/* Hero Section */
+/* Hero Section (Content After Background) */
 .hero {
-  padding: 40px 10px;
+  padding: 60px 20px;
   text-align: center;
-  background-color: #f9f9f9; /* Adjust for mobile */
+  background-color: #f9f9f990; /* Add background color to contrast with the full-screen image */
 }
 
 .hero-content {
-  color: #000;
+  color: #000000;
   max-width: 800px;
   padding: 0 20px;
 }
 
 .hero-content h1 {
-  font-size: 2.5em; /* Reduced font size for smaller screens */
+  font-size: 3em;
   margin-bottom: 20px;
 }
 
@@ -96,100 +96,112 @@ a:hover {
 
 .cta-button:hover {
   background-color: #0000007d;
+  color: #fff;
 }
 
 /* Section Styles */
 section {
-  padding: 40px 15px; /* Adjusted padding for smaller screens */
+  padding: 60px 20px;
   text-align: center;
 }
 
 section h2 {
-  font-size: 2em; /* Reduced for mobile */
-  margin-bottom: 30px;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+/* About Me Section */
+#about .about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#about img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 /* Carousels */
 .swiper-container {
   width: 100%;
-  max-width: 1200px; /* Reduced the max width */
+  max-width: 1500px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  align-items: center; /* Center the carousel vertically */
 }
 
 .swiper-slide {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center slide content horizontally */
+  justify-content: flex-start;
   text-align: center;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for both opacity and scaling */
 }
 
+/* Portfolio Carousel Section */
+#portfolio {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Default opacity for non-active slides */
+.swiper-slide {
+  opacity: 0.5; /* 75% opacity for non-active slides */
+  transform: scale(0.85); /* Scale down non-active slides */
+}
+
+/* Active slide (center slide) */
+.swiper-slide-active {
+  opacity: 1; /* Fully visible for the active slide */
+  transform: scale(1); /* Full size for active slide */
+}
+
+/* Slide content container */
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* Images inside the slides */
 .swiper-slide img {
-  max-width: 300px; /* Adjust for mobile */
+  max-width: 500px;
+  max-height: 500px;
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
+/* Text Overlay */
 .slide-text {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Dark semi-transparent background for readability */
   color: white;
   text-align: left;
 }
 
 .slide-text h3 {
   margin: 0;
-  font-size: 1.2em; /* Adjusted size */
+  font-size: 1.5em;
 }
 
 .slide-text p {
   margin: 5px 0 0;
-  font-size: 0.9em; /* Adjusted size */
-}
-
-/* Gallery Section */
-.gallery-section {
-  padding: 40px 15px; /* Adjusted for mobile */
-  text-align: center;
-}
-
-.gallery {
-  column-count: 2; /* Default to 2 columns */
-  column-gap: 10px; /* Reduce the gap for mobile */
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.gallery-item {
-  break-inside: avoid;
-  margin-bottom: 10px; /* Reduce margin for mobile */
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 5px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.05);
-  opacity: 0.9;
+  font-size: 1em;
 }
 
 /* Stories Section */
-#stories {
-  padding: 40px 15px;
-  text-align: center;
-}
-
 .stories-container {
   display: flex;
   flex-wrap: wrap;
@@ -212,38 +224,19 @@ section h2 {
 }
 
 .read-more {
-  color: #ed2323;
+  color: #000000;
   font-weight: bold;
 }
 
 .read-more:hover {
-  color: #d22222;
+  color: #ed2323;
 }
 
-/* Testimonials Section */
-#testimonials {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.testimonials-carousel {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.swiper-slide {
+/* Testimonials Carousel */
+.testimonials-carousel .swiper-slide {
   display: flex;
+  align-items: center;
   justify-content: center;
-  text-align: center;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  opacity: 0.75; /* 75% opacity for non-active slides */
-  transform: scale(0.85); /* Scale down non-active slides */
-}
-
-.swiper-slide-active {
-  opacity: 1; /* Fully visible for the active slide */
-  transform: scale(1); /* Full size for active slide */
 }
 
 .testimonial {
@@ -261,46 +254,43 @@ section h2 {
 }
 
 /* Contact Section */
-#contact {
-  padding: 60px 20px;
-  background-color: #f1f1f1;
+
+.contact {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the carousel vertically */
 }
 
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
+.contact-details {
+  margin-top: 20px;
+  width: 50%;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.contact-details p,
+.contact-details a {
+  font-size: 1.1em;
 }
 
-.contact-form button {
-  display: inline-block;
-  padding: 12px 25px;
-  background-color: #ed2323;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.social-links {
+  margin-top: 10px;
 }
 
-.contact-form button:hover {
-  background-color: #d22222;
+.social-links a {
+  margin: 0 10px;
+  color: #000000;
+  font-size: 1.2em;
+}
+
+.social-links a:hover {
+  color: #ed2323;
 }
 
 /* Footer */
 footer {
   background-color: #333;
   color: #fff;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -308,40 +298,85 @@ footer p {
   margin-top: 10px;
 }
 
-/* Responsive Adjustments */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
-    padding: 0;
   }
 
   .hero-content h1 {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
   section h2 {
-    font-size: 1.8em;
-  }
-
-  .gallery {
-    column-count: 1; /* Single column on smaller screens */
+    font-size: 2em;
   }
 }
 
 @media (max-width: 480px) {
   .hero-content h1 {
-    font-size: 1.8em;
+    font-size: 2em;
   }
 
   .cta-button {
-    padding: 8px 15px;
-  }
-
-  .gallery {
-    column-count: 1; /* Single column */
+    padding: 10px 20px;
   }
 
   .story {
     flex: 1 1 100%;
+  }
+}
+/* Gallery Section */
+.gallery-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Gallery Container with Masonry Layout */
+.gallery {
+  column-count: 4; /* Number of columns */
+  column-gap: 15px; /* Gap between columns */
+  max-width: 1200px; /* Maximum width of the gallery */
+  margin: 0 auto; /* Center the gallery */
+}
+
+/* Gallery Items */
+.gallery-item {
+  break-inside: avoid; /* Prevent items from breaking into multiple columns */
+  margin-bottom: 15px; /* Space below each image */
+  position: relative;
+}
+
+/* Images Inside Gallery Items */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px; /* Optional: rounded corners */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effects */
+.gallery-item:hover img {
+  transform: scale(1.05); /* Slight zoom on hover */
+  opacity: 0.9; /* Slightly reduce opacity on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .gallery {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    column-count: 1;
   }
 }
