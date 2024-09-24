@@ -29,10 +29,6 @@ const portfolioSwiper = new Swiper(".portfolio-carousel", {
     el: ".portfolio-carousel .swiper-pagination",
     clickable: true,
   },
-  navigation: {
-    nextEl: ".portfolio-carousel .swiper-button-next",
-    prevEl: ".portfolio-carousel .swiper-button-prev",
-  },
   lazy: true, // Lazy load images for better performance
 });
 
@@ -66,10 +62,7 @@ const brandingSwiper = new Swiper(".branding-carousel", {
     el: ".branding-carousel .swiper-pagination",
     clickable: true,
   },
-  navigation: {
-    nextEl: ".branding-carousel .swiper-button-next",
-    prevEl: ".branding-carousel .swiper-button-prev",
-  },
+
   lazy: true,
 });
 
