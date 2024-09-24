@@ -366,6 +366,14 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  .background-section {
+    display: none;
+  }
+  .swiper-container .swiper-button-next,
+  .swiper-container .swiper-button-prev,
+  .swiper-pagination {
+    display: none;
+  }
   .navbar ul {
     flex-direction: column;
     align-items: center;
@@ -422,6 +430,14 @@ footer p {
 }
 
 @media (max-width: 600px) {
+  .background-section {
+    display: none;
+  }
+  .swiper-container .swiper-button-next,
+  .swiper-container .swiper-button-prev,
+  .swiper-pagination {
+    display: none;
+  }
   .gallery {
     column-count: 1;
   }
@@ -482,6 +498,14 @@ footer p {
 }
 
 @media (max-width: 480px) {
+  .background-section {
+    display: none;
+  }
+  .swiper-container .swiper-button-next,
+  .swiper-container .swiper-button-prev,
+  .swiper-pagination {
+    display: none;
+  }
   .hero-content h1 {
     font-size: 1.5em;
   }
